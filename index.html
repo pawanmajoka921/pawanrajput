@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Storage.css">
+</head>
+<body>
+
+    <marquee behavior="alternate" direction="up" width="100%" bg-color="red">Create new account</marquee>
+    <center>
+    <div class="box">
+
+        <header><h2>Create new account</h2>
+              <h3>it's quick and easy</h3> </header>
+
+        <input type="text" placeholder="First name" id="fname">  <input type="text" placeholder="Surname" id="sname">
+        <input type="number" placeholder="Mobile number or email address" id="Number">
+        <input type="password" placeholder="New passward" id="pass">
+
+        <select id="gender">
+            <option value="select">select</option>
+            <option value="Male">Male</option>
+            <option value="FeMale">Female</option>
+
+        </select>
+
+        <span>Date of birth</span><br>
+
+
+                                 
+
+                                                     
+        <select id="day">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            
+
+        </select>
+        <select id="month">
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <option>Apr</option>
+            <option>May</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Aug</option>
+            <option>Sep</option>
+            <option>Oct</option>
+            <option>Nov</option>
+            <option>Dec</option>
+
+        </select>
+
+        <select id="year">
+            <option >2024</option>
+            <option >2023</option>
+            <option >2022</option>
+            <option >2021</option>
+            <option >2020</option>
+            <option >2019</option>
+            <option >2018</option>
+            <option >2017</option>
+            <option >2016</option>
+            <option >2015</option>
+            <option >2014</option>
+            <option >2013</option>
+            <option >2012</option>
+            <option >2011</option>
+            <option >2010</option>
+            <option >2009</option>
+            <option >2008</option>
+            <option >2007</option>
+            <option >2006</option>
+            <option >2005</option>
+            
+        </select><br><br>
+        <center>
+
+        
+
+        <button type="button" onclick="sub()">Sign Up</button>
+    </center>
+
+
+
+
+
+    </div>
+</center>
+
+    <script>
+        debugger
+        function sub(){
+
+        
+        let Fname=document.getElementById('fname').value;
+        let Sname=document.getElementById('sname').value;
+        let number=document.getElementById('Number').value;
+        let Pass=document.getElementById('pass').value;
+        let Day=document.getElementById('day').value;
+        let Month=document.getElementById('month').value;
+        let Year=document.getElementById('year').value;
+        let Gender=document.getElementById('gender').value;
+
+        // if (Gender=Male) {
+        //     alert("male");
+            
+        // } else {
+        //     alert("female");
+            
+        // }
+
+
+
+
+        
+            
+            
+        
+
+        
+        
+
+
+        let DOB= Day+"/"+Month+"/"+Year;
+        let fullname=Fname  +" "+ Sname;
+        sessionStorage.setItem('fullname' , fullname);
+        sessionStorage.setItem('number' , number);
+        sessionStorage.setItem('Pass',Pass)
+        sessionStorage.setItem('DOB',DOB)
+        sessionStorage.setItem('Gender',Gender)
+
+        window.location.href="http://127.0.0.1:5500/profile.html";
+        }
+    </script>
+</body>
+</html>
