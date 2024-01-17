@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fetchdata()">
+    <center>
+        
+    <h1>Fullname : <span id="data"></span></h1>
+    <h1>Number: <span id="datas"></span></h1>
+    <h1>Password: <span id="data1"></span></h1>
+    <h1>Date of birth: <span id="data2"></span></h1>
+    <h1>Gender: <span id="data7"></span></h1>
+
+
+    </center>
+    <script>
+        function fetchdata(){
+            document.getElementById('data').innerHTML=sessionStorage.getItem('fullname');
+            document.getElementById('datas').innerHTML=sessionStorage.getItem('number');
+            document.getElementById('data1').innerHTML=sessionStorage.getItem('Pass');
+            document.getElementById('data2').innerHTML=sessionStorage.getItem('DOB');
+            document.getElementById('data7').innerHTML=sessionStorage.getItem('Gender');
+
+
+
+        }
+    </script>
+</body>
+</html>
